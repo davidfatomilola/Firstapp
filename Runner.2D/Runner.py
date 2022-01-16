@@ -73,11 +73,11 @@ while  True:
         if Game_start:   
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if player_rectangle.collidepoint(event.pos) and player_rectangle.bottom >= 391:
-                    player_gravity = -21
+                    player_gravity = -22
                     
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE and player_rectangle.bottom >= 391:
-                    player_gravity = -21
+                    player_gravity = -22
         else:
             if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
                 Game_start = True
@@ -98,10 +98,10 @@ while  True:
         
         
         #ENEMY
-        #snail_rectangle.right -= 4
-        #if snail_rectangle.right <= 0:
-            #snail_rectangle.left = 800
-        #screen.blit(snail_character,snail_rectangle)
+        snail_rectangle.right -= 4
+        if snail_rectangle.right <= 0:
+            snail_rectangle.left = 800
+        screen.blit(snail_character,snail_rectangle)
         
         
         #PLAYER
